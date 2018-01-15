@@ -18,7 +18,7 @@ function loadTemplate(template, data) {
       if (template.find('[data-list-ul="' + key + '"]').length) {
         var html = '<ul>';
         for (var i = 0; i < value.length; i++) {
-          html += "<li><a href='/careers/interview?keyword=" + encodeURIComponent(value[i]) +"'>" + value[i] + '</a></li>';
+          html += "<li><a href='" + encodeURIComponent(value[i]) +"'>" + value[i] + '</a></li>';
         }
         html += '</ul>';
         template.find('[data-list-ul="' + key + '"]').html(html);
